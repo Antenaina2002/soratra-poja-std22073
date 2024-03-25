@@ -27,4 +27,12 @@ public class SoratraController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<Soratra> getSoratra(@PathVariable String id) {
+        Soratra soratra = soratraService.findById(id);
+        if (soratra == null) {
+            return new ResponseEntity<>(HttpStatus.OK);
+        }
+        return new ResponseEntity<>(soratra, HttpStatus.OK);
+    }
 }
