@@ -19,4 +19,10 @@ public class Soratra {
 
     @Column(name = "name")
     private String name;
+
+    @Column(name = "original_url")
+    private String originalUrl;
+
+    @Column(name = "transformed_url")
+    private String transformedUrl;
 }
